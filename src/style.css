@@ -88,13 +88,29 @@ body{
     align-items: center;
     padding: 100px;
 }
+.slider__buttons{
+    position: absolute;
+    right: 46px;
+    bottom: 40px;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+.slider_button{
+    cursor: pointer;
+}
+.swiper{
+    position: relative;
+}
 .slide__text_light{
     background: #414141;
     color: #ffffff;
 
 }
 .slide__content{
-    max-width: 400px;
+    max-width: 500px;
 }
 .slide__title{
     margin-top: 0;
@@ -131,12 +147,20 @@ body{
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%), url("./bg/summer.png") no-repeat;
     background-size: cover;
 }
+.slide__autumn{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%), url("./bg/autumn.png") no-repeat;
+    background-size: cover;
+}
+.slide__vitamin{
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.43) 40.45%, rgba(0, 0, 0, 0) 100%), url("./bg/vitamin.png") no-repeat;
+    background-size: cover;
+}
 .promo{
     padding-top: 50px;
     padding-bottom: 50px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .card{
@@ -147,10 +171,18 @@ body{
     padding: 32px;
     width: 570px;
     min-height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0 47px 0 0;
+
+}
+.second_card{
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./images/promo2.png") no-repeat;
+    background-size: cover;
+    padding: 32px;
+    width: 570px;
+    min-height: 380px;
+
+
 }
 .card__text_light{
     color: #ffffff;
@@ -186,19 +218,7 @@ body{
     display: block;
     margin-bottom: 25px;
 }
-.second_card{
-    border-radius: 20px;
-    overflow: hidden;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("./images/promo2.png") no-repeat;
-    background-size: cover;
-    padding: 32px;
-    width: 570px;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0;
-}
+
 .section__title{
     font-style: normal;
     font-weight: 500;
@@ -243,6 +263,34 @@ body{
 .tag_health{
     background: #D0FD89;
 }
+.tag_vegetable{
+    color: #ffffff;
+    background: #AEBC41;
+}
+.tag_meat{
+    color: #ffffff;
+    background: #B86B78;
+}
+.tag_bird{
+    color: #ffffff;
+    background: #D68334;
+}
+.tag_fish{
+    color: #ffffff;
+    background: #CD6255;
+}
+.tag_child{
+    background: #FFFDBF;
+    color: #49494F;
+}
+.tag_parents{
+    background: #F6FDC8;
+    color: #49494F;
+}
+.tag_party{
+    color: #49494F;
+    background: #FEF7FE;
+}
 .section_grey{
     background: #F6F6F6
 }
@@ -267,6 +315,11 @@ body{
 }
 .tabs__link.active{
     color: #F37321;
+}
+.tabs__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .tabs__card{
     max-width: 270px;
@@ -334,6 +387,61 @@ body{
     margin-top: 60px;
     width: 315px;
 }
+.section_light{
+    background: #ffffff;
+}
+.benefits{
+    padding-top: 60px;
+    padding-bottom: 130px;
+}
+.benefits__title_content{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 23px;
+    margin-bottom: 52px;
+}
+.benefits__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.benefits__card{
+    max-width: 270px;
+    min-height: 296px;
+    overflow: hidden;
+    background: #FFFFFF;
+    border: 1px solid #E9E9E9;
+    box-sizing: border-box;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 18px;
+}
+.distance{
+    padding: 30px;
+}
+.benefit__card_icon{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 34px;
+}
+.benefits_title{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 25px;
+}
+.benefits_description{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #49494F;
+
+}
 .footer{
     padding: 40px 0;
     background: #F6F6F6;
@@ -362,4 +470,97 @@ body{
 .social_link{
     margin-left: 20px;
     text-decoration: none;
+}
+@media(max-width: 1260px){
+    .container{
+        max-width: 960px;
+    }
+    .search__form{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .promo{
+        display: flex;
+       flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .second_card{
+        margin-top: 25px;
+        margin-bottom: -25px;
+        max-width: 100%;
+    }
+    .tabs__content{
+        flex-wrap: wrap;
+    }
+    .tabs__card{
+        flex: 50%;
+        max-width: calc(50% - 30px);
+    }
+    .benefits__content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .benefits__card{
+        margin: 0 30px 30px 0;
+    }
+}
+@media (max-width: 992px) {
+    .container{
+        max-width: 750px;
+    }
+    .slide{
+        padding: 60px;
+    }
+    .delivery_card{
+        width: calc(50% - 30px);
+    }
+    .promo{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tabs__card{
+        margin-bottom: 25px;
+    }
+    .benefits__content{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .benefits__card{
+        max-width: 45%;
+    }
+    .footer__logo{
+        margin-right: 40px;
+    }
+}
+@media (max-width: 750px) {
+    .container{
+        max-width: 560px;
+    }
+    .header{
+        flex-wrap: wrap;
+    }
+    .search__form{
+        order: 5;
+        margin: 30px 0 30px 0;
+    }
+    .promo{
+        flex-wrap: wrap;
+    }
+    .benefits__card{
+        max-width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .container{
+        max-width: 90%;
+    }
+    .tabs__card{
+        max-width: 100%;
+    }
+    
 }
